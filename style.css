@@ -1,0 +1,50 @@
+body {
+    min-height: 100vh;
+    background-image: url(img/fondobody.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(0, 0, 0);
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(5,35,61);
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    justify-content: center;
+    gap: 70px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+li:hover {
+    background-color: aqua;
+    border-radius: 10px;
+    padding: 1px;
+}
+
+section nav {
+    background-color: rgb(14, 78, 107);
+    padding: 3px 20px;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    color: white;
+}
