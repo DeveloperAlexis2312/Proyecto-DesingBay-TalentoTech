@@ -94,3 +94,242 @@ header  {
 .search-input:focus {              /* Efecto al hacer foco */
   border-color: #2A9DF5;
 }
+
+/* Estilos para ¿Quienes somos? */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fdfdfd;
+    color: #333;
+}
+
+/*Header y sidebar*/
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #222;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #444;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/*Sección ¿Quiénes somos?*/
+.quienes-somos {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #f5f5f5, #fff);
+}
+
+.quienes-somos h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.quienes-somos p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Cards de misión y visión  */
+.mision-vision {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+footer {
+  text-align: center;
+}
+
+/* ------------------ CONTACTO ------------------ */
+#contacto {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+#contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contacto input,
+#contacto textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+#contacto textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#contacto button {
+  background: #007BFF;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contacto button:hover {
+  background: #0056b3;
+}
+
+/*preguntas freq*/
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0; 
+}
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.faq {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+details {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+details:hover {
+  background-color: #f0f0f0;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+details[open] summary {
+  color: #007BFF;
+}
+
+/*aviso legal*/
+
+.aviso-legal {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.aviso-legal h2 {
+  text-align: center;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+.aviso-legal p {
+  margin-bottom: 15px;
+}
+
+.aviso-legal a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.aviso-legal a:hover {
+  text-decoration: underline;
+}
