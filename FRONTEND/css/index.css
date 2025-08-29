@@ -1,8 +1,7 @@
 body {
-    min-height: 100vh;
     background-attachment: fixed;
     background-size: cover;
-    background-color: rgb(160, 198, 203);
+    background-color: white;
     padding: 0;
     margin: 0;
 }
@@ -15,7 +14,7 @@ header  {
     background-color: #000000;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 7px solid #2A9DF5;
+    border-bottom: 3px solid #F5A42A;
 }
 
 .imagen-header {
@@ -93,4 +92,93 @@ header  {
 
 .search-input:focus {              /* Efecto al hacer foco */
   border-color: #2A9DF5;
+}
+
+main {
+  flex: 1;
+}
+
+/*footer*/
+
+:root {
+  --footer-bg: #000000;         /* Fondo del footer */
+  --footer-text: #f1f1f1;       /* Texto principal */
+  --footer-link: #aaaaaa;       /* Enlaces */
+  --footer-link-hover: #ffffff; /* Hover de enlaces */
+  --footer-border: #333333;     /* Línea divisoria */
+}
+
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 1px solid var(--footer-border);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  bottom: 0;         /* Lo pega abajo */
+  left: 0;           /* Alineado a la izquierda */
+  width: 100%;       /* Que ocupe todo el ancho */
+  z-index: 1000;     /* Para que quede por encima de otros elementos */
+  border-top: 3px solid #F5A42A;
+}
+
+/* Redes sociales */
+.footer__redes {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer__redes .img__footer {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1); /* Hace los íconos blancos */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer__redes a:hover .img__footer {
+  transform: scale(1.2);
+  filter: brightness(0) invert(0.6); /* Hover más sutil */
+}
+
+/* Links de navegación */
+.footer__info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer__info a {
+  color: var(--footer-link);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer__info a:hover {
+  color: var(--footer-link-hover);
+}
+
+/* Texto inferior */
+.footer__span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--footer-link);
+  margin-top: 1rem;
+}
+
+
+.footer__span a {
+  color: #a8dadc;            /* color de los enlaces */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer__span a:hover {
+  color: #f1faee;            /* color del enlace al pasar el mouse */
 }
