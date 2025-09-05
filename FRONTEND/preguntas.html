@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DesingBay Colombia</title> <!-- Titulo de la pagina -->
-    <link rel="shortcut icon" href="/img/fabicon.png"> <!-- icono que se visualiza en la pestaña del navegador -->
+    <link rel="shortcut icon" href="/FRONTEND/img/fabicon.png"> <!-- icono que se visualiza en la pestaña del navegador -->
     <link rel="stylesheet" href="/FRONTEND/css/index.css"> <!-- Linkeo al archivo css del index -->
     <script src="/FRONTEND/js/index.js"></script>
 </head>
@@ -16,19 +16,20 @@
             </a> 
         </div>    <!-- boton menu que despliega la barra lateral -->
 
-        <nav>
-            <div id="mySidebar" class="sidebar">
-                <span class="close-btn" onclick="closeMenu()">   <!-- Boton que cierra la barra lateral -->
-                    <img class="imagen-header" src="/FRONTEND/img/icons-header/cerrar.png" alt="Menu">
-                </span>
-                <a href="index.html">Inicio</a>
-                <a href="productos.html">Productos</a>
-                <a href="quienessomos.html">¿Quiénes somos?</a>
-                <a href="contacto.html">Contacto</a>
-                <a href="preguntas.html">Preguntas frecuentes</a>
-                <a href="avisolegal.html">Avisos legales</a>       <!-- contenido del menu que despliega la barra lateral -->
-            </div>
-        </nav>
+<nav>
+    <div id="mySidebar" class="sidebar">
+        <span class="close-btn" onclick="closeMenu()">   <!-- Boton que cierra la barra lateral -->
+            <img class="imagen-header" src="/FRONTEND/img/icons-header/cerrar.png" alt="Menu">
+        </span>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="quienessomos.html">¿Quiénes somos?</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="preguntas.html">Preguntas frecuentes</a>
+        <a href="avisolegal.html">Avisos legales</a> <!-- contenido del menu que despliega la barra lateral -->
+    </div>
+</nav>
+
 
         <div class="logo">
             <a class="a-header" href="index.html">
@@ -52,39 +53,40 @@
             </a>
         </div>          <!-- Boton que me lleva a la pagina de login -->
     </header> <!-- header con menu hambuerguesa, logo con vinculo al index, barra de busqueda, boton de login y carrito de compras -->
+    
 
+  <h2>Preguntas Frecuentes</h2>
 
-<main>
+  <section class="faq">
+    <details>
+      <summary>¿Qué tipo de arte puedo encontrar aquí?</summary>
+      Vendemos obras originales de artistas emergentes en pintura, ilustración, arte digital y más.
+    </details>
 
-</main>
+    <details>
+      <summary>¿Las obras vienen con certificado de autenticidad?</summary>
+      Sí, todas las obras originales incluyen un certificado firmado por el artista.
+    </details>
 
+    <details>
+      <summary>¿Puedo devolver una obra si no me gusta?</summary>
+      Aceptamos devoluciones dentro de los primeros 7 días posteriores a la entrega.
+    </details>
 
+    <details>
+      <summary>¿Cómo puedo pagar?</summary>
+      Aceptamos tarjetas de crédito, débito, PayPal y transferencias bancarias.
+    </details>
+  </section>
 
     <footer>
-        <div class="footer__redes">
-            <a class="a__footer" href="#">
-                <img class="img__footer" src="/FRONTEND/img/icon-footer/logotipo-de-instagram.png" alt="Instagram">
-            </a>
-            <a class="a__footer" href="#">
-                <img class="img__footer" src="/FRONTEND/img/icon-footer/tik-tok.png" alt="Tiktok">
-            </a>
-            <a class="a__footer" href="#">
-                <img class="img__footer" src="/FRONTEND/img/icon-footer/facebook.png" alt="Facebook">
-            </a>
-        </div>
-
-        <div class="footer__info">
-            <ul>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">¿Quiénes Somos?</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
-            </ul>
-        </div>
-
-        <span class="footer__span">
-            Copyright <b>&copy; 2025 DesingBay</b> | Cali - Colombia | <a href="#">Avisos legales</a>
-        </span>
+        <p>&copy; 2025 DesingBay - Todos los derechos reservados</p>
     </footer>
+
+    <script>
+        function closeMenu() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
 </body>
 </html>
