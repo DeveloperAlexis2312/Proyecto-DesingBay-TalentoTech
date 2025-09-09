@@ -6,7 +6,6 @@
     <title>DesingBay Colombia</title> <!-- Titulo de la pagina -->
     <link rel="shortcut icon" href="img/fabicon.png"> <!-- icono que se visualiza en la pestaña del navegador -->
     <link rel="stylesheet" href="css/index.css"> <!-- Linkeo al archivo css del index -->
-    <script src="js/index.js"></script>
 </head>
 <body>
     <header>  <!-- header con menu hambuerguesa, logo con vinculo al index, barra de busqueda, boton de login y carrito de compras -->
@@ -52,14 +51,23 @@
             </a>
         </div>          <!-- Boton que me lleva a la pagina de login -->
     </header> <!-- header con menu hambuerguesa, logo con vinculo al index, barra de busqueda, boton de login y carrito de compras -->
-
-
-<main>
-
-</main>
-
-
-
+    <main class="carruselesMain">
+        <div class="container-carousel">
+            <div class="carruseles" id="slider">
+                <section class="slider-section">
+                    <img src="img/img-carrusel/Van_Gogh_1.jpg" alt="">
+                </section>
+                <section class="slider-section">
+                    <img src="img/img-carrusel/efecto-acrilico_4.jpg" alt="">
+                </section>
+                <section class="slider-section">
+                    <img src="img/img-carrusel/polvo-de-colores_6.jpg" alt="">
+                </section>
+            </div>
+            <div class="btn-left"><img src="img/Iconos/SLIDE LEFT.png" alt="" id="left"></div>
+            <div class="btn-right"><img src="img/Iconos/SLIDE RIGHT.png" alt="" id="right"></div>
+        </div>
+    </main>
     <footer>
         <div class="footer__redes">
             <a class="a__footer" href="#">
@@ -76,15 +84,16 @@
         <div class="footer__info">
             <ul>
                 <li><a href="#">Productos</a></li>
-                <li><a href="#">¿Quiénes Somos?</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
+                <li><a href="quienessomos.html">¿Quiénes Somos?</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
             </ul>
         </div>
 
         <span class="footer__span">
-            Copyright <b>&copy; 2025 DesingBay</b> | Cali - Colombia | <a href="#">Avisos legales</a>
+            Copyright <b>&copy; 2025 DesingBay</b> | Cali - Colombia | <a href="avisolegal.html">Avisos legales</a>
         </span>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>

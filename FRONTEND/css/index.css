@@ -1,7 +1,6 @@
 body {
     background-attachment: fixed;
     background-size: cover;
-    background-color: white;
     padding: 0;
     margin: 0;
 }
@@ -117,7 +116,7 @@ footer {
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   bottom: 0;         /* Lo pega abajo */
   left: 0;           /* Alineado a la izquierda */
-  width: 100%;       /* Que ocupe todo el ancho */
+  /*width: 100%;/*   /* Que ocupe todo el ancho */
   z-index: 1000;     /* Para que quede por encima de otros elementos */
   border-top: 3px solid #F5A42A;
 }
@@ -186,7 +185,7 @@ footer {
 .quienes-somos {
     text-align: center;
     padding: 50px 20px;
-    background: linear-gradient(to bottom, #f5f5f5, #fff);
+    /*background: linear-gradient(to bottom, #f5f5f5, #fff);*/
 }
 
 .quienes-somos h1 {
@@ -375,4 +374,79 @@ details[open] summary {
 
 .aviso-legal a:hover {
   text-decoration: underline;
+}
+
+.carruselesMain {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container-carousel {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 300vh;
+    height: 500px;
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 black;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.carruseles {
+    width: 700vh;
+    height: 100%;
+    display: flex;
+}
+
+.slider-section {
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+.slider-section img {
+    width: 300vh;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600px;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: #333333d4;
+    color: #fff;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+#left {
+    width: 30px;
+}
+
+#right {
+    width: 30px;
 }

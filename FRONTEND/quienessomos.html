@@ -16,20 +16,19 @@
             </a> 
         </div>    <!-- boton menu que despliega la barra lateral -->
 
-<nav>
-    <div id="mySidebar" class="sidebar">
-        <span class="close-btn" onclick="closeMenu()">   <!-- Boton que cierra la barra lateral -->
-            <img class="imagen-header" src="img/icons-header/cerrar.png" alt="Menu">
-        </span>
-        <a href="index.html">Inicio</a>
-        <a href="productos.html">Productos</a>
-        <a href="quienessomos.html">¿Quiénes somos?</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="preguntas.html">Preguntas frecuentes</a>
-        <a href="avisolegal.html">Avisos legales</a> <!-- contenido del menu que despliega la barra lateral -->
-    </div>
-</nav>
-
+        <nav>
+            <div id="mySidebar" class="sidebar">
+                <span class="close-btn" onclick="closeMenu()">   <!-- Boton que cierra la barra lateral -->
+                    <img class="imagen-header" src="img/icons-header/cerrar.png" alt="Menu">
+                </span>
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="quienessomos.html">¿Quiénes somos?</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="preguntas.html">Preguntas frecuentes</a>
+                <a href="avisolegal.html">Avisos legales</a>       <!-- contenido del menu que despliega la barra lateral -->
+            </div>
+        </nav>
 
         <div class="logo">
             <a class="a-header" href="index.html">
@@ -53,14 +52,13 @@
             </a>
         </div>          <!-- Boton que me lleva a la pagina de login -->
     </header> <!-- header con menu hambuerguesa, logo con vinculo al index, barra de busqueda, boton de login y carrito de compras -->
-    
     <main>
         <section class="quienes-somos">
             <h1>¿Quiénes Somos?</h1>
-            <p>En <strong>DesingBay</strong> Somos una comunidad digital diseñada para que artistas, creadores y talentos emergentes puedan publicar, compartir y vender sus obras de manera sencilla y segura.
-
-Nuestro propósito es dar visibilidad al trabajo artístico y crear un puente directo con compradores que valoran la creatividad.
-Más que una plataforma, somos un escenario abierto en el que cada creador puede mostrar su voz única, conectar con su audiencia y hacer crecer su trayectoria profesional.</p>
+                <p>En <strong>DesingBay</strong> Somos una comunidad digital diseñada para que artistas, creadores y talentos emergentes puedan publicar, compartir y vender sus obras de manera sencilla y segura.
+                    Nuestro propósito es dar visibilidad al trabajo artístico y crear un puente directo con compradores que valoran la creatividad.
+                    Más que una plataforma, somos un escenario abierto en el que cada creador puede mostrar su voz única, conectar con su audiencia y hacer crecer su trayectoria profesional.
+                </p>
             
             <div class="mision-vision">
                 <div class="card">
@@ -76,15 +74,31 @@ Más que una plataforma, somos un escenario abierto en el que cada creador puede
             </div>
         </section>
     </main>
-
     <footer>
-        <p>&copy; 2025 DesingBay - Todos los derechos reservados</p>
-    </footer>
+        <div class="footer__redes">
+            <a class="a__footer" href="#">
+                <img class="img__footer" src="img/icon-footer/logotipo-de-instagram.png" alt="Instagram">
+            </a>
+            <a class="a__footer" href="#">
+                <img class="img__footer" src="img/icon-footer/tik-tok.png" alt="Tiktok">
+            </a>
+            <a class="a__footer" href="#">
+                <img class="img__footer" src="img/icon-footer/facebook.png" alt="Facebook">
+            </a>
+        </div>
 
-    <script>
-        function closeMenu() {
-            document.getElementById("mySidebar").style.width = "0";
-        }
-    </script>
+        <div class="footer__info">
+            <ul>
+                <li><a href="#">Productos</a></li>
+                <li><a href="quienessomos.html">¿Quiénes Somos?</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+            </ul>
+        </div>
+
+        <span class="footer__span">
+            Copyright <b>&copy; 2025 DesingBay</b> | Cali - Colombia | <a href="avisolegal.html">Avisos legales</a>
+        </span>
+    </footer>
 </body>
 </html>
