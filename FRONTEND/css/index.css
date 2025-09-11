@@ -182,3 +182,32 @@ footer {
 .footer__span a:hover {
   color: #f1faee;            /* color del enlace al pasar el mouse */
 }
+
+#pokemon-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.pokemon-card{
+    background-color: white;
+    border: 2px solid #ef5350;
+    border-radius: 8px;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.pokemon-card img{
+    width: 100px;
+    height: 100px;
+}
+
+.pokemon-name{
+    font-weight: bold;
+    color: #d32f2f;
+    margin-top: 8px;
+    text-transform: capitalize;
+}
