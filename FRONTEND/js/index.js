@@ -50,3 +50,39 @@ function moveToLeft() {
     slider.style.transform = `translate(-${operacion}%)`;
     slider.style.transition = "all ease .6s"
 }
+
+
+
+//prodctos 
+
+// URL de la API (tu compañero la definirá)
+const API_URL = "http://localhost:3000/products";
+
+// Contenedor donde van los productos
+const container = document.getElementById("products-container");
+
+// Llamar a la API
+fetch(API_URL)
+  .then(response => response.json())
+  .then(products => {
+    products.forEach(product => {
+      // Crear tarjeta
+      const card = document.createElement("div");
+      card.classList.add("product-card");
+
+      card.innerHTML = `
+        <div class="product-image">
+          <img src="${product.image}" alt="${product.name}">
+        </div>
+        <div class="product-info">
+          <h3 class="product-title">${product.name}</h3>
+          <p class="product-price">$${product.price}</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      `;
+
+      // Agregar tarjeta al contenedor
+      container.appendChild(card);
+    });
+  })
+  .catch(error => console.error("Error fetching products:", error));
