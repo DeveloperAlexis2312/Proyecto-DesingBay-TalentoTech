@@ -377,7 +377,7 @@ details[open] summary {
   text-decoration: underline;
 }
 
-.carruselesMain {
+.carruselesMain {                     /*main carruseles*/
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -387,12 +387,14 @@ details[open] summary {
     margin: 0;
     padding: 0;
     position: relative;
-    width: 300vh;
-    height: 500px;
+    width: 98%;
+    height: 60%;
     background-color: #e0e0e0;
-    box-shadow: 0 8px 32px 0 black;
+    box-shadow: 0 3px 20px 0 #175788;
     border-radius: 0px;
     overflow: hidden;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 
 .carruseles {
@@ -432,22 +434,30 @@ details[open] summary {
 
 .btn-left:hover,
 .btn-right:hover {
-    background-color: #333333d4;
+    background-color: white;
     color: #fff;
 }
 
 .btn-left {
     left: 10px;
+    background-color: rgb(210, 210, 210);
 }
 
 .btn-right {
     right: 10px;
+    background-color: rgb(210, 210, 210);
 }
 
 #left {
     width: 30px;
+    border-radius: 20px;
 }
 
 #right {
     width: 30px;
+    border-radius: 20px;
+}
+
+main {
+  background-color: rgb(46, 46, 46);
 }
