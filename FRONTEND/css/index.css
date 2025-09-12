@@ -454,9 +454,64 @@ details[open] summary {
 
 #right {
     width: 30px;
-    border-radius: 20px;
 }
 
-main {
-  background-color: rgb(46, 46, 46);
+
+/*productos*/
+
+.container {
+  max-width: 1300px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* GRID DE PRODUCTOS */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* TARJETA DEL PRODUCTO */
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+#pokemon-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.pokemon-card{
+    background-color: white;
+    border: 2px solid #ef5350;
+    border-radius: 8px;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.pokemon-card img{
+    width: 100px;
+    height: 100px;
+}
+
+.pokemon-name{
+    font-weight: bold;
+    color: #d32f2f;
+    margin-top: 8px;
+    text-transform: capitalize;
 }
