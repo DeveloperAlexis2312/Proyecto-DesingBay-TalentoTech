@@ -50,3 +50,5 @@ function moveToLeft() {
     slider.style.transform = `translate(-${operacion}%)`;
     slider.style.transition = "all ease .6s"
 }
+
+
