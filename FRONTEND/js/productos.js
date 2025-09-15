@@ -1,32 +1,37 @@
-    const minRange = document.getElementById("minRange");
-    const maxRange = document.getElementById("maxRange");
-    const minValue = document.getElementById("minValue");
-    const maxValue = document.getElementById("maxValue");
-    const sliderTrack = document.querySelector(".slider-track");
+const minRange = document.getElementById("min-price");
+const maxRange = document.getElementById("max-price");
+const minValue = document.getElementById("min-price-value");
+const maxValue = document.getElementById("max-price-value");
+const progressBar = document.querySelector(".price-slider .progress");
 
-    let minGap = 50;
-    let sliderMaxValue = maxRange.max;
+function updateRange() {
+  let min = parseInt(minRange.value);
+  let max = parseInt(maxRange.value);
 
-    function fillColor() {
-      let percent1 = (minRange.value / sliderMaxValue) * 100;
-      let percent2 = (maxRange.value / sliderMaxValue) * 100;
-      sliderTrack.style.background = `linear-gradient(to right, #bbb ${percent1}%, #333 ${percent1}%, #333 ${percent2}%, #bbb ${percent2}%)`;
-    }
+  // Evita que se crucen
+  if (min > max - 50) {
+    minRange.value = max - 50;
+    min = max - 50;
+  }
+  if (max < min + 50) {
+    maxRange.value = min + 50;
+    max = min + 50;
+  }
 
-    minRange.addEventListener("input", () => {
-      if (parseInt(maxRange.value) - parseInt(minRange.value) <= minGap) {
-        minRange.value = parseInt(maxRange.value) - minGap;
-      }
-      minValue.textContent = `$${minRange.value}`;
-      fillColor();
-    });
+  minValue.textContent = `$${min}`;
+  maxValue.textContent = `$${max}`;
 
-    maxRange.addEventListener("input", () => {
-      if (parseInt(maxRange.value) - parseInt(minRange.value) <= minGap) {
-        maxRange.value = parseInt(minRange.value) + minGap;
-      }
-      maxValue.textContent = `$${maxRange.value}`;
-      fillColor();
-    });
+  // Calcula la posición de la barra verde
+  let percentMin = (min / minRange.max) * 100;
+  let percentMax = (max / maxRange.max) * 100;
 
-    window.addEventListener("load", fillColor);
+  progressBar.style.left = percentMin + "%";
+  progressBar.style.width = (percentMax - percentMin) + "%";
+}
+
+// Eventos
+minRange.addEventListener("input", updateRange);
+maxRange.addEventListener("input", updateRange);
+
+// Inicializar
+updateRange();
