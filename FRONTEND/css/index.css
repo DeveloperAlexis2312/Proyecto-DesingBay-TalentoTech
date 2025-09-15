@@ -378,9 +378,11 @@ details[open] summary {
 }
 
 .carruselesMain {                     /*main carruseles*/
-  height: 100vh;
+  width: 100%;
+  height: 370px;
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .container-carousel {
@@ -388,7 +390,7 @@ details[open] summary {
     padding: 0;
     position: relative;
     width: 98%;
-    height: 60%;
+    height: 100%;
     background-color: #e0e0e0;
     box-shadow: 0 3px 20px 0 #175788;
     border-radius: 0px;
@@ -458,6 +460,71 @@ details[open] summary {
     border-radius: 20px;
 }
 
-main {
-  background-color: rgb(46, 46, 46);
+.titulo-categoria {             /*botonera de categorias*/
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #464646;
+}
+
+.container-categorias-padre {
+  margin: 50px;
+  padding: 0;
+  border-top: #F5A42A solid;
+}
+
+.container-categoria {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 250px;
+  margin-left: 180px;
+  margin-right: 180px;
+}
+
+.container-categoria2 {
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  height: 250px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.boton-cat:hover {
+  border-radius: 100%;
+  transform: scale(1.1);
+  transition: transform 0.9s;
+  opacity: 0.8;
+}
+
+.boton-cat {
+  border-radius: 100%;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  transition: transform 0.9s ease;
+  box-shadow: 0 3px 20px 0 #000000;
+}
+
+.texto-cat {
+  color:  #ffffff;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#imagen1,
+#imagen2,
+#imagen3,
+#imagen4,
+#imagen5 {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  opacity: 1;
 }
