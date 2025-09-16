@@ -566,7 +566,7 @@ button[type="submit"]:active {
   transform: scale(0.98);
 }
 
-/* ==== Responsive ==== */
+/* ==== Responsivo ==== */
 @media (max-width: 600px) {
   .contenedor {
     margin: 20px;
