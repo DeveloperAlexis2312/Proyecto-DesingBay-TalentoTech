@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesingBay Colombia</title> <!-- Titulo de la pagina -->
+    <link rel="shortcut icon" href="/FRONTEND/img/fabicon.png"> <!-- Icono de la pestaña -->
+    <link rel="stylesheet" href="/FRONTEND/css/index.css"> <!-- Archivo CSS -->
+    <script src="/FRONTEND/js/index.js" defer></script> <!-- Archivo JS -->
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="menu">
+            <a class="a-header" href="#" onclick="openMenu()">
+                <img class="imagen-header" src="/FRONTEND/img/icons-header/menu.png" alt="Menu"> 
+            </a> 
+        </div>
+
+        <nav>
+            <div id="mySidebar" class="sidebar">
+                <span class="close-btn" onclick="closeMenu()">
+                    <img class="imagen-header" src="/FRONTEND/img/icons-header/cerrar.png" alt="Cerrar">
+                </span>
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="quienessomos.html">¿Quiénes somos?</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="preguntas.html">Preguntas frecuentes</a>
+                <a href="avisolegal.html">Avisos legales</a>
+            </div>
+        </nav>
+
+        <div class="logo">
+            <a class="a-header" href="index.html">
+                <img class="imagen-logo" src="/FRONTEND/img/icons-header/Logos-05.png" alt="Logo">
+            </a>
+        </div>
+
+        <div class="buscar">
+            <input type="search" class="search-input" placeholder="Buscar un producto">
+        </div>
+
+        <div class="carro">
+            <a class="a-header" href="#">
+                <img class="imagen-header" src="/FRONTEND/img/icons-header/carro-de-la-carretilla.png" alt="Carrito">
+            </a>
+        </div>
+
+        <div class="sesion">
+            <a class="a-header" href="#">
+                <img class="imagen-header" src="/FRONTEND/img/icons-header/usuario (1).png" alt="Usuario">
+            </a>
+        </div>
+    </header>
+  
+    <!-- Main -->
+    <main>
+        <!-- Contenedor de productos con JS/API -->
+        <section id="productos">
+            <h2>Carrito de compras </h2>
+            <div id="lista-productos">
+                <!-- Aquí entran los productos desde la API -->
+            </div>
+        </section>
+
+        <!-- Carrito -->
+        <section id="carrito">
+            <h2>Tu carrito</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody id="carrito-items">
+                    
+                </tbody>
+            </table>
+
+            <!-- Resumen compra -->
+            <div id="resumen">
+                <h3>Resumen</h3>
+                <p>Total: <span id="total">$0</span></p>
+                <button id="btn-finalizar">Finalizar compra</button>
+            </div>
+        </section>
+    </main>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesingBay Colombia</title> <!-- Titulo de la pagina -->
+    <link rel="shortcut icon" href="/FRONTEND/img/fabicon.png"> <!-- Icono de la pestaña -->
+    <link rel="stylesheet" href="/FRONTEND/css/index.css"> <!-- Archivo CSS -->
+    <script src="/FRONTEND/js/index.js" defer></script> <!-- Archivo JS -->
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="menu">
+            <a class="a-header" href="#" onclick="openMenu()">
+                <img class="imagen-header" src="/FRONTEND/img/icons-header/menu.png" alt="Menu"> 
+            </a> 
+        </div>
+
+        <nav>
+            <div id="mySidebar" class="sidebar">
+                <span class="close-btn" onclick="closeMenu()">
+                    <img class="imagen-header" src="/FRONTEND/img/icons-header/cerrar.png" alt="Cerrar">
+                </span>
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="quienessomos.html">¿Quiénes somos?</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="preguntas.html">Preguntas frecuentes</a>
+                <a href="avisolegal.html">Avisos legales</a>
+            </div>
+        </nav>
+
+        <div class="logo">
+            <a class="a-header" href="index.html">
+                <img class="imagen-logo" src="/FRONTEND/img/icons-header/Logos-05.png" alt="Logo">
+            </a>
+        </div>
+
+        <div class="buscar">
+            <input type="search" class="search-input" placeholder="Buscar un producto">
+        </div>
+
+        <div class="carro">
+            <a class="a-header" href="#">
+                <img class="imagen-header" src="/FRONTEND/img/icons-header/carro-de-la-carretilla.png" alt="Carrito">
+            </a>
+        </div>
+
+        <div class="sesion">
+            <a class="a-header" href="#">
+                <img class="imagen-header" src="/FRONTEND/img/icons-header/usuario (1).png" alt="Usuario">
+            </a>
+        </div>
+    </header>
+     <main>
+    <div class="contenedor">
+        <h1>Finalizar Compra</h1>
+        <form id="checkout-form">
+            
+            <!-- Datos del comprador -->
+            <fieldset>
+                <legend>Datos del Comprador</legend>
+                <div class="fila">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="fila">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="fila">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+            </fieldset>
+
+            <!-- Dirección de envío -->
+            <fieldset>
+                <legend>Dirección de Envío</legend>
+                <div class="fila">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+                <div class="fila">
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" id="ciudad" name="ciudad" required>
+                </div>
+                <div class="fila">
+                    <label for="codigo-postal">Código Postal</label>
+                    <input type="text" id="codigo-postal" name="codigo-postal" required>
+                </div>
+            </fieldset>
+
+            <!-- Método de pago -->
+            <fieldset>
+                <legend>Método de Pago</legend>
+                <div class="payment-method">
+                    <label for="tarjeta">
+                        <input type="radio" id="tarjeta" name="metodo-pago" value="tarjeta" required>
+                        Tarjeta de Crédito / Débito
+                    </label>
+                    <label for="paypal">
+                        <input type="radio" id="paypal" name="metodo-pago" value="paypal">
+                        PayPal
+                    </label>
+                    <label for="contraentrega">
+                        <input type="radio" id="contraentrega" name="metodo-pago" value="contraentrega">
+                        Pago Contraentrega
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Info tarjeta -->
+            <fieldset id="tarjeta-info">
+                <legend>Detalles de la Tarjeta</legend>
+                <div class="fila">
+                    <label for="numero-tarjeta">Número de tarjeta</label>
+                    <input type="number" id="numero-tarjeta" name="numero-tarjeta">
+                </div>
+                <div class="fila">
+                    <label for="fecha-exp">Fecha de expiración</label>
+                    <input type="text" id="fecha-exp" name="fecha-exp" placeholder="MM/AA">
+                </div>
+                <div class="fila">
+                    <label for="cvv">CVV</label>
+                    <input type="password" id="cvv" name="cvv">
+                </div>
+            </fieldset>
+
+            <!-- Resumen del pedido -->
+            <section id="order-summary">
+                <h2>Resumen del Pedido</h2>
+                <div id="summary-items">
+                    <!-- productos seleccionados -->
+                </div>
+                <p id="summary-totals">Total: <span>$0</span></p>
+            </section>
+
+           
+            <div id="checkout-errors"></div>
+
+            <!-- Botón finalizar -->
+            <button type="submit">Confirmar y Pagar</button>
+        </form>
+    </div>
+</main>
+
+</body>
+</html>
