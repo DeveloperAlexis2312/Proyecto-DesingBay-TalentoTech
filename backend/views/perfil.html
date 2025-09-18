@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesingBay Colombia</title> <!-- Titulo de la pagina -->
+    <link rel="shortcut icon" href="img/fabicon.png"> <!-- icono que se visualiza en la pestaña del navegador -->
+    <link rel="stylesheet" href="index.css"> <!-- Linkeo al archivo css del index -->
+    <script src="index.js"></script> <!-- Archivo JS -->
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="menu">
+            <a class="a-header" href="#" onclick="openMenu()">
+                <img class="imagen-header" src="img/icons-header/menu.png" alt="Menu"> 
+            </a> 
+        </div>
+
+        <nav>
+            <div id="mySidebar" class="sidebar">
+                <span class="close-btn" onclick="closeMenu()">
+                    <img class="imagen-header" src="img/icons-header/cerrar.png" alt="Cerrar">
+                </span>
+                    <a href="/">Inicio</a>
+                    <a href="/productos">Productos</a>
+                    <a href="/quienesSomos">¿Quiénes somos?</a>
+                    <a href="/contacto">Contacto</a>
+                    <a href="/preguntas">Preguntas frecuentes</a>
+                    <a href="/avisoLegal">Avisos legales</a>  
+            </div>
+        </nav>
+
+        <div class="logo">
+            <a class="a-header" href="/">
+                <img class="imagen-logo" src="img/icons-header/Logos-05.png" alt="Logo">
+            </a>
+        </div>
+        <div class="buscar">
+            <input type="search" class="search-input" placeholder="Buscar un producto">
+        </div>
+
+        <div class="carro">
+            <a class="a-header" href="/cart">
+                <img class="imagen-header" src="img/icons-header/carro-de-la-carretilla.png" alt="Carrito">
+            </a>
+        </div>
+
+        <div class="sesion">
+            <a class="a-header" href="/login">
+                <img class="imagen-header" src="img/icons-header/usuario (1).png" alt="Usuario">
+            </a>
+        </div>
+    </header>
+    
+   <main>
+  <div class="perfil-contenedor">
+    
+    <!-- Foto y nombre -->
+    <section class="perfil-header">
+      <div class="perfil-foto">
+        <img id="user-photo" src="img/rubencho.jpg">
+      </div>
+      <div class="perfil-info">
+        <h1>Rubén Morales</h1>
+        <p>📧 rubencho@gmail.com</p>
+        <p>🎂 23 años</p>
+        <p>🎶 Músico</p>
+      </div>
+    </section>
+
+   
+    <section class="perfil-preferencias">
+      <h2>Preferencias de Arte</h2>
+      <ul>
+        <li>Pintura contemporánea</li>
+        <li>Fotografía artística</li>
+        <li>Música Salsa</li>
+      </ul>
+    </section>
+
+    
+    <section class="perfil-compras">
+      <h2>Compras Recientes</h2>
+      <div>
+      </div>
+    </section>
+
+    <!-- Botones -->
+    <div class="perfil-acciones">
+      <button>Editar Perfil</button>
+      <div class="sesion" id="user-session"></div>
+    </div>
+  </div>
+</main>
+<footer>
+        <div class="footer__redes">
+            <a class="a__footer" href="#">
+                <img class="img__footer" src="img/icon-footer/logotipo-de-instagram.png" alt="Instagram">
+            </a>
+            <a class="a__footer" href="#">
+                <img class="img__footer" src="img/icon-footer/tik-tok.png" alt="Tiktok">
+            </a>
+            <a class="a__footer" href="#">
+                <img class="img__footer" src="img/icon-footer/facebook.png" alt="Facebook">
+            </a>
+        </div>
+
+        <div class="footer__info">
+            <ul>
+                <li><a href="#">Productos</a></li>
+                <li><a href="quienessomos.html">¿Quiénes Somos?</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+            </ul>
+        </div>
+
+        <span class="footer__span">
+            Copyright <b>&copy; 2025 DesingBay</b> | Cali - Colombia | <a href="avisolegal.html">Avisos legales</a>
+        </span>
+    </footer>
+    <script>
+        // This script fetches the user session data and updates the header
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/api/session')
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success && data.user) {
+                        const userSessionDiv = document.getElementById('user-session');
+                        // Clear existing content and add the welcome message and logout button
+                        userSessionDiv.innerHTML = `
+                            <div style="display: flex; align-items: center; gap: 1rem; color: white; font-family: sans-serif; font-size: 16px;">
+                                <form action="/auth/logout" method="POST" style="margin: 0;">
+                                    <button type="submit" style="background-color: #F5A42A; color: white; border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-size: 14px; font-weight: bold;">
+                                        Salir
+                                    </button>
+                                </form>
+                            </div>
+                        `;
+                    } 
+                })
+                .catch(err => {
+                    console.error('Error fetching user session:', err);
+                    // Handle fetch error, perhaps by redirecting to login
+                    window.location.href = '/login';
+                });
+        });
+    </script>
+</body>
+</html>
+ 
